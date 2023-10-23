@@ -1,3 +1,5 @@
+string version = "1.0.0.0";
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
