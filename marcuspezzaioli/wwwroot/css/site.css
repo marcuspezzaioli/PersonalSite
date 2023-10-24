@@ -1,0 +1,67 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-jade {
+    background-color: #00A86B; /* Jade green color */
+    border-color: #00A86B;
+    color: #ffffff; /* White text */
+}
+
+.btn-jade:hover, .btn-jade:focus, .btn-jade:active {
+    background-color: #008755; /* A slightly darker shade for hover/active states */
+    border-color: #008755;
+}
+
+.jade-green-line {
+    height: 2px; /* or whatever thickness you prefer */
+    background-color: #00A86B; /* Jade green color */
+}
+
+.circular-image {
+    width: 150px; /* or whatever size you want */
+    height: 150px;
+    border-radius: 50%; /* This creates the circular effect */
+    overflow: hidden; /* This ensures any part of the image outside the circle gets hidden */
+    object-fit: cover; /* Ensures the image covers the whole 'circle' and scales appropriately */
+}
+
+
+.custom-grey {
+    background-color: #f2f2f2
+}
+
+a {
+    color: #00A676;
+    text-decoration: none; /* Optional: If you want to remove the underline */
+}
+
+    /* If you want the links to change color slightly when hovered upon for better user feedback */
+    a:hover {
+        color: #00885A; /* A slightly darker shade of jade green */
+        text-decoration: underline; /* Optional: Adding underline on hover for better UX */
+    }
