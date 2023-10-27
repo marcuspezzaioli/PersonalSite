@@ -2,29 +2,32 @@
 	ViewData["Title"] = "Home Page";
 }
 
-<div class="container">
-	<div class="row hero-section">
 
-		<div class="d-flex align-items-center justify-content-center vh-100">
-			<div class="col-10 offset-1 col-md-6 offset-md-2">
+<section class="home-layout">
+	<div class="contact-me">
 
-				<h1 class="display-3 mb-5 text-md-start text-center">Marcus Pezzaioli</h1>
-			<p class="mb-5">
-				With 5 years of professional experience in software development and a background in mathematics, I specialize in crafting predictive algorithms for sporting events.<br /> <br />
-				I take pride in writing clean, comprehensible code, and I thrive when faced with complex problems. <br /> <br />
-				Beyond the world of coding, I have a passion for languages and am fluent in Italian.
-			</p>
-			
-			<div class="text-center">
-				<a class="btn btn-jade" asp-area="" asp-controller="AboutMe" asp-action="Index">Contact me</a>
-			</div>
-		</div>
-	
+		<h1 class="page-title">Marcus Pezzaioli</h1>
 
-		<!-- Image -->
-			<div class="col-md-3 offset-md-1 d-none d-md-block">
-			<img src="https://live.staticflickr.com/65535/53274526951_81ec332668_b.jpg" alt="An AI generated monitor with jade green and white code on a black background." class="img-fluid">
-		</div>
+
+
+		<div class="jade-green-line"></div>
+
+
+		<p class="blurb">
+			With 5 years of professional experience in software development and a background in mathematics, I specialize in crafting predictive algorithms for sporting events.<br /> <br />
+			I take pride in writing clean, comprehensible code, and I thrive when faced with complex problems. <br /> <br />
+			Beyond the world of coding, I have a passion for languages and am fluent in Italian.
+		</p>
+
+		<div class="container-that-centers">
+			<a class="btn btn-jade" asp-area="" asp-controller="AboutMe" asp-action="Index">Contact me</a>
 		</div>
 	</div>
-</div>
+
+	<div class="hero-img">
+		<img class="feature-img" src="https://live.staticflickr.com/65535/53274526951_81ec332668_b.jpg" alt="An AI generated monitor with jade green and white code on a black background." class="img-fluid">
+	</div>
+</section>
+
+
+

@@ -1,3 +1,4 @@
+/*General*/
 html {
     font-size: 14px;
 }
@@ -32,36 +33,109 @@ h1, h2, h3, h4, h5, h6 {
     color: #ffffff; /* White text */
 }
 
-.btn-jade:hover, .btn-jade:focus, .btn-jade:active {
-    background-color: #008755; /* A slightly darker shade for hover/active states */
-    border-color: #008755;
-}
+    .btn-jade:hover, .btn-jade:focus, .btn-jade:active {
+            background-color: #008755; /* A slightly darker shade for hover/active states */
+            border-color: #008755;
+    }
 
 .jade-green-line {
-    height: 2px; /* or whatever thickness you prefer */
+    margin: auto;
+    height: 2px;
     background-color: #00A86B; /* Jade green color */
-}
-
-.circular-image {
-    width: 150px; /* or whatever size you want */
-    height: 150px;
-    border-radius: 50%; /* This creates the circular effect */
-    overflow: hidden; /* This ensures any part of the image outside the circle gets hidden */
-    object-fit: cover; /* Ensures the image covers the whole 'circle' and scales appropriately */
-}
-
-
-.custom-grey {
-    background-color: #f2f2f2
+    max-width: 80%;
+    
 }
 
 a {
     color: #00A676;
-    text-decoration: none; /* Optional: If you want to remove the underline */
+    text-decoration: none; /* Removes the underline */
 }
 
-    /* If you want the links to change color slightly when hovered upon for better user feedback */
     a:hover {
         color: #00885A; /* A slightly darker shade of jade green */
-        text-decoration: underline; /* Optional: Adding underline on hover for better UX */
+        text-decoration: underline; /*Adding underline on hover for better UX */
     }
+
+.page-title {
+    margin: 50px 5px 35px 5px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.blurb {
+    margin: 35px 5px 35px 5px;
+    text-align: left;
+}
+
+.container-that-centers {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*Home Page*/
+.home-layout {
+    max-width: 85%;
+    margin: auto;
+}
+
+.feature-img {
+    display: none;
+}
+
+@media (min-width: 800px) {
+
+    .home-layout {
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .jade-green-line{
+        display: none;
+    }
+
+    .page-title {
+        margin: 35px 0px 35px 0px;
+        text-align: left;
+        font-size: 70px;
+    }
+
+    .contact-me {
+        max-width: 37vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        margin: 0vh 0 0vh 28vw;
+        float: left;
+    }
+
+    .blurb {
+        margin: 0px 0px 70px 0px;
+    }
+
+    .hero-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        max-width: 28vw;
+        height: 100vh;
+    }
+
+    .feature-img {
+        display: inline;
+        max-width: 65% ;
+        max-height: 40%;
+    }
+}
+    
+/*About me*/
+/*TO DO - SEE IF CAN IMPROVE*/
+.circular-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+}
