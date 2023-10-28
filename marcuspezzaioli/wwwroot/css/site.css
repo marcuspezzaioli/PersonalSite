@@ -58,33 +58,9 @@ a {
 
 
 
-/*
-.page-title {
-    margin: 50px 5px 35px 5px;
-    text-align: center;
-    font-size: 35px;
-}
-
-.blurb {
-    margin: 35px 5px 35px 5px;
-    text-align: left;
-}
-
-.container-that-centers {
-    display: flex;
-    justify-content: center;
-}
-*/
-
 /*Home Page*/
 
-/*
-.home-layout {
-    max-width: 85%;
-    margin: auto;
-}
-    */
-
+/*Mobile portrait - 360 X 640. Grid of 6 columns and 16 rows*/
 .home-layout {
     display: grid;
     grid-template-columns: repeat(6,1fr);
@@ -105,12 +81,13 @@ a {
     grid-row: 4 / 5;
 }
 
-.blurb {
+.blurb-container {
     grid-column: 2 / 6;
     grid-row: 5 / 12;
 }
 
-.container-that-centers {
+
+.button-container {
     display: flex;
     justify-content: center;
     grid-column: 3 / 5;
@@ -121,6 +98,44 @@ a {
     display: none;
 }
 
+@media (orientation: landscape) {
+    /*Mobile landscape - 640 X 360. Grid of 16 columns and 12 rows*/
+    .home-layout {
+        grid-template-columns: repeat(16,1fr);
+        grid-template-rows: repeat(12, 1fr);
+    }
+
+    .page-title-container {
+        grid-column: 2 / 8;
+        grid-row: 2 / 6;
+        font-size: 20px;
+        align-items: center;
+    }
+    .page-title {
+        align-content: center;
+        align-items: center;
+    }
+    
+    .button-container {
+        grid-column: 3 / 7;
+        grid-row: 7 / 8;
+    }
+
+    .line-placer {
+        display: none;
+    }
+
+    .blurb-container {
+        grid-column: 9 / -1;
+        grid-row: 1 / -1;
+        background-color: #00A86B;
+        color: white;
+    }
+
+    .blurb {
+        margin: 20px 20px 20px 20px;
+    }
+}
 
 /*To do - replace with Grid*/
 /*
