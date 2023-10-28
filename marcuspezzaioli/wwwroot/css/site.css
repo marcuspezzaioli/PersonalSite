@@ -56,6 +56,9 @@ a {
         text-decoration: underline; /*Adding underline on hover for better UX */
     }
 
+
+
+/*
 .page-title {
     margin: 50px 5px 35px 5px;
     text-align: center;
@@ -71,18 +74,56 @@ a {
     display: flex;
     justify-content: center;
 }
-
+*/
 
 /*Home Page*/
+
+/*
 .home-layout {
     max-width: 85%;
     margin: auto;
+}
+    */
+
+.home-layout {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(16, 1fr);
+
+}
+
+.page-title-container {
+    display: flex;
+    justify-content: center;
+    grid-column: 2 / 6;
+    grid-row: 2 / 4;
+    font-size: 35px;
+}
+
+.line-placer {
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+}
+
+.blurb {
+    grid-column: 2 / 6;
+    grid-row: 5 / 12;
+}
+
+.container-that-centers {
+    display: flex;
+    justify-content: center;
+    grid-column: 3 / 5;
+    grid-row: 13 / 14;
 }
 
 .feature-img {
     display: none;
 }
 
+
+/*To do - replace with Grid*/
+/*
 @media (min-width: 800px) {
 
     .home-layout {
@@ -129,6 +170,7 @@ a {
         max-height: 40%;
     }
 }
+    */
     
 /*About me*/
 /*TO DO - SEE IF CAN IMPROVE*/
