@@ -1,4 +1,4 @@
-string version = "1.0.0.0";
+string version = "1.0.1.0";
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,3 +1,4 @@
+/*General*/
 html {
     font-size: 14px;
 }
@@ -26,42 +27,207 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
 }
 
+.jade-green-line {
+    margin: auto;
+    height: 2px;
+    background-color: #00A86B; /* Jade green color */
+    max-width: 80%;
+}
+
 .btn-jade {
     background-color: #00A86B; /* Jade green color */
     border-color: #00A86B;
     color: #ffffff; /* White text */
 }
 
-.btn-jade:hover, .btn-jade:focus, .btn-jade:active {
-    background-color: #008755; /* A slightly darker shade for hover/active states */
-    border-color: #008755;
-}
+    .btn-jade:hover, .btn-jade:focus, .btn-jade:active {
+        background-color: #008755; /* A slightly darker shade for hover/active states */
+        border-color: #008755;
+        text-decoration: none;
+    }
 
 .jade-green-line {
-    height: 2px; /* or whatever thickness you prefer */
+    margin: auto;
+    height: 2px;
     background-color: #00A86B; /* Jade green color */
-}
-
-.circular-image {
-    width: 150px; /* or whatever size you want */
-    height: 150px;
-    border-radius: 50%; /* This creates the circular effect */
-    overflow: hidden; /* This ensures any part of the image outside the circle gets hidden */
-    object-fit: cover; /* Ensures the image covers the whole 'circle' and scales appropriately */
-}
-
-
-.custom-grey {
-    background-color: #f2f2f2
+    max-width: 80%;
+    
 }
 
 a {
     color: #00A676;
-    text-decoration: none; /* Optional: If you want to remove the underline */
+    text-decoration: none; /* Removes the underline */
 }
 
-    /* If you want the links to change color slightly when hovered upon for better user feedback */
     a:hover {
         color: #00885A; /* A slightly darker shade of jade green */
-        text-decoration: underline; /* Optional: Adding underline on hover for better UX */
+        text-decoration: underline; /*Adding underline on hover for better UX */
     }
+
+strong {
+    color: #006600;
+}
+
+
+
+/*Home Page*/
+
+/*Mobile portrait - 360 X 640. Grid of 6 columns and 16 rows*/
+.home-layout {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(16, 1fr);
+    height: 100vh;
+}
+
+.page-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / -1;
+    grid-row: 5 / 7;
+    color: black;
+}
+
+.page-title {
+    font-size: 30px;
+    color: black;
+    text-align: center;
+}
+
+
+.blurb-container {
+    grid-column: 2 / 6;
+    grid-row: 8 / 9;
+}
+
+.blurb {
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+
+.button-container {
+    display: inline-flex;
+    justify-content: center;
+    grid-column: 3 / 5;
+    grid-row: 10 / 11;
+}
+
+/*Tablet portrait*/
+@media (orientation: portrait) and (min-width: 600px)  {
+    .page-title, .blurb {
+        font-size: 50px;
+    }
+
+    .btn-jade {
+        font-size: 30px;
+    }
+
+    .blurb {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+@media (orientation: landscape) {
+    /*Mobile landscape - 640 X 360. Grid of 16 columns and 12 rows*/
+    .home-layout {
+        display: grid;
+        grid-template-columns: repeat(16,1fr);
+        grid-template-rows: repeat(12, 1fr);
+        height: 100vh;
+    }
+
+    .page-title-container {
+        grid-column: 2 / 14;
+        grid-row: 4 / 5;
+    }
+
+    .button-container {
+        grid-column: 2 / 14;
+        grid-row: 9 / 10;
+    }
+
+
+    .blurb-container {
+        grid-column: 2 / 14;
+        grid-row: 7 / 8;
+    }
+
+    /*Tablet landscape*/
+    @media (min-width: 800px) {
+        .page-title, .blurb {
+            font-size: 50px;
+        }
+
+        .btn-jade {
+            font-size: 30px;
+        }
+    }
+
+
+}
+
+/*To do - replace with Grid*/
+/*
+@media (min-width: 800px) {
+
+    .home-layout {
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .jade-green-line{
+        display: none;
+    }
+
+    .page-title {
+        margin: 35px 0px 35px 0px;
+        text-align: left;
+        font-size: 70px;
+    }
+
+    .contact-me {
+        max-width: 37vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        margin: 0vh 0 0vh 28vw;
+        float: left;
+    }
+
+    .blurb {
+        margin: 0px 0px 70px 0px;
+    }
+
+    .hero-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        max-width: 28vw;
+        height: 100vh;
+    }
+
+    .feature-img {
+        display: inline;
+        max-width: 65% ;
+        max-height: 40%;
+    }
+}
+    */
+    
+/*About me*/
+/*TO DO - SEE IF CAN IMPROVE*/
+.circular-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+}
