@@ -64,6 +64,10 @@ a {
         text-decoration: underline; /*Adding underline on hover for better UX */
     }
 
+strong {
+    color: #006600;
+}
+
 
 
 /*Home Page*/
@@ -81,21 +85,26 @@ a {
     justify-content: center;
     align-items: center;
     grid-column: 1 / -1;
-    grid-row: 1 / 4;
-    background-image: linear-gradient(to right, #008755 0%, #008755 100%);
-    color: white;
+    grid-row: 5 / 7;
+    color: black;
 }
 
-
-.line-placer {
-    display: none;
-    grid-column: 1 / -1;
-    grid-row: 4 / 5;
+.page-title {
+    font-size: 30px;
+    color: black;
+    text-align: center;
 }
+
 
 .blurb-container {
     grid-column: 2 / 6;
-    grid-row: 5 / 12;
+    grid-row: 8 / 9;
+}
+
+.blurb {
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
 
 
@@ -103,56 +112,64 @@ a {
     display: inline-flex;
     justify-content: center;
     grid-column: 3 / 5;
-    grid-row: 13 / 14;
+    grid-row: 10 / 11;
 }
 
-.feature-img {
-    display: none;
+/*Tablet portrait*/
+@media (orientation: portrait) and (min-width: 600px)  {
+    .page-title, .blurb {
+        font-size: 50px;
+    }
+
+    .btn-jade {
+        font-size: 30px;
+    }
+
+    .blurb {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }
+
 
 
 @media (orientation: landscape) {
     /*Mobile landscape - 640 X 360. Grid of 16 columns and 12 rows*/
     .home-layout {
+        display: grid;
         grid-template-columns: repeat(16,1fr);
         grid-template-rows: repeat(12, 1fr);
+        height: 100vh;
     }
 
     .page-title-container {
-        grid-column: 2 / 8;
-        grid-row: 4 / 6;
-        font-size: 20px;
-        align-items: center;
-        background: white;
+        grid-column: 2 / 14;
+        grid-row: 4 / 5;
     }
-    .page-title {
-        align-content: center;
-        align-items: center;
-        font-size: 20px;
-        color: black;
-    }
-    
+
     .button-container {
-        grid-column: 3 / 7;
+        grid-column: 2 / 14;
+        grid-row: 9 / 10;
+    }
+
+
+    .blurb-container {
+        grid-column: 2 / 14;
         grid-row: 7 / 8;
     }
 
-    .line-placer {
-        display: none;
+    /*Tablet landscape*/
+    @media (min-width: 800px) {
+        .page-title, .blurb {
+            font-size: 50px;
+        }
+
+        .btn-jade {
+            font-size: 30px;
+        }
     }
 
-    .blurb-container {
-        grid-column: 9 / -1;
-        grid-row: 1 / -1;
-        background-image: linear-gradient(to right, #008755 0%, #008755 100%);
-        display: flex;
-        align-items: center;
-        color: white;
-    }
 
-    .blurb {
-        margin: 0px 3vw 0px 3vw;
-    }
 }
 
 /*To do - replace with Grid*/
